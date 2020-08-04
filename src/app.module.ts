@@ -1,4 +1,4 @@
-import { Module, HttpModule } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
@@ -9,7 +9,6 @@ import { GeocodingModule } from './geocoding/geocoding.module';
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://127.0.0.1:27017/moku'),
-    HttpModule,
     ProductsModule,
     UsersModule,
     GeocodingModule
